@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التداول - CoinFuture</title>
+    <meta name="description" content="منصة تداول العملات الرقمية - CoinFuture">
+    <meta name="keywords" content="تداول, عملات رقمية, شراء, بيع, Bitcoin">
+    <link rel="canonical" href="https://coinfuture.com/trading.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>CoinFuture</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="markets.html">الأسواق</a></li>
+                    <li><a href="trading.html" class="active">التداول</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> خروج</button></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="trading-page">
+            <h1>منصة التداول</h1>
+            <div class="trading-grid">
+                <!-- Buy Card -->
+                <div class="trading-card">
+                    <h2><i class="fas fa-arrow-down" style="color:#27ae60;"></i> شراء</h2>
+                    <form id="buyForm">
+                        <div class="form-group">
+                            <label>العملة</label>
+                            <select id="buyCoin">
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="ethereum">Ethereum</option>
+                                <option value="bnb">BNB</option>
+                                <option value="solana">Solana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>المبلغ ($)</label>
+                            <input type="number" id="buyAmount" value="100" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>السعر</label>
+                            <input type="text" id="buyPrice" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>الإجمالي</label>
+                            <input type="text" id="buyTotal" readonly>
+                        </div>
+                        <button type="submit" class="btn-buy">شراء</button>
+                    </form>
+                </div>
+
+                <!-- Sell Card -->
+                <div class="trading-card">
+                    <h2><i class="fas fa-arrow-up" style="color:#e74c3c;"></i> بيع</h2>
+                    <form id="sellForm">
+                        <div class="form-group">
+                            <label>العملة</label>
+                            <select id="sellCoin">
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="ethereum">Ethereum</option>
+                                <option value="bnb">BNB</option>
+                                <option value="solana">Solana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>المبلغ ($)</label>
+                            <input type="number" id="sellAmount" value="100" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>السعر</label>
+                            <input type="text" id="sellPrice" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>الإجمالي</label>
+                            <input type="text" id="sellTotal" readonly>
+                        </div>
+                        <button type="submit" class="btn-sell">بيع</button>
+                    </form>
+                </div>
+
+                <!-- Exchange Card -->
+                <div class="trading-card">
+                    <h2><i class="fas fa-exchange-alt"></i> تحويل</h2>
+                    <form id="exchangeForm">
+                        <div class="form-group">
+                            <label>من</label>
+                            <select id="exchangeFrom">
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="ethereum">Ethereum</option>
+                                <option value="bnb">BNB</option>
+                                <option value="solana">Solana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>إلى</label>
+                            <select id="exchangeTo">
+                                <option value="ethereum">Ethereum</option>
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="bnb">BNB</option>
+                                <option value="solana">Solana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>المبلغ</label>
+                            <input type="number" id="exchangeAmount" value="1" min="0.01">
+                        </div>
+                        <button type="submit" class="btn-exchange">تحويل</button>
+                    </form>
+                    <p id="exchangeResult" class="exchange-result"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CoinFuture</h3>
+                    <p>منصة متطورة لتداول العملات الرقمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="markets.html">الأسواق</a></li>
+                        <li><a href="trading.html">التداول</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CoinFuture. جميع الحقوق محفوظة</p>
+            </div>
+        </footer>
+
+        <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

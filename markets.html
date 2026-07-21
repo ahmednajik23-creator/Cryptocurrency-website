@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسواق - CoinFuture</title>
+    <meta name="description" content="أسواق العملات الرقمية - CoinFuture">
+    <meta name="keywords" content="تداول, عملات رقمية, أسواق, Bitcoin, Ethereum">
+    <link rel="canonical" href="https://coinfuture.com/markets.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>CoinFuture</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="markets.html" class="active">الأسواق</a></li>
+                    <li><a href="trading.html">التداول</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> خروج</button></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="markets-page">
+            <h1>أسواق العملات الرقمية</h1>
+            <div class="market-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن عملة...">
+                </div>
+                <div class="filter-options">
+                    <select id="filterSelect">
+                        <option value="all">الكل</option>
+                        <option value="gainers">الأكثر ربحاً</option>
+                        <option value="losers">الأكثر خسارة</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="markets-table">
+                <thead>
+                    <tr>
+                        <th>العملة</th>
+                        <th>السعر</th>
+                        <th>التغير 24h</th>
+                        <th>القيمة السوقية</th>
+                        <th>الحجم</th>
+                    </tr>
+                </thead>
+                <tbody id="marketData">
+                    <!-- سيتم ملء البيانات بواسطة JavaScript -->
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CoinFuture</h3>
+                    <p>منصة متطورة لتداول العملات الرقمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="markets.html">الأسواق</a></li>
+                        <li><a href="trading.html">التداول</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CoinFuture. جميع الحقوق محفوظة</p>
+            </div>
+        </footer>
+
+        <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

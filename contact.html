@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - CoinFuture</title>
+    <meta name="description" content="تواصل مع فريق CoinFuture">
+    <meta name="keywords" content="اتصال, دعم, CoinFuture">
+    <link rel="canonical" href="https://coinfuture.com/contact.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>CoinFuture</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="markets.html">الأسواق</a></li>
+                    <li><a href="trading.html">التداول</a></li>
+                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                    <li><button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> خروج</button></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="contact-page">
+            <h1>اتصل بنا</h1>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>معلومات التواصل</h2>
+                    <p><i class="fas fa-envelope"></i> support@coinfuture.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>خريطة الموقع</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> الاسم</label>
+                            <input type="text" id="contactName" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                            <input type="email" id="contactEmail" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> رقم الهاتف</label>
+                            <input type="tel" id="contactPhone" placeholder="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> الموضوع</label>
+                            <input type="text" id="contactSubject" placeholder="موضوع الرسالة" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> الرسالة</label>
+                            <textarea id="contactMessage" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">إرسال</button>
+                        <p id="contactResult" class="contact-result"></p>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CoinFuture</h3>
+                    <p>منصة متطورة لتداول العملات الرقمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="markets.html">الأسواق</a></li>
+                        <li><a href="trading.html">التداول</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CoinFuture. جميع الحقوق محفوظة</p>
+            </div>
+        </footer>
+
+        <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
